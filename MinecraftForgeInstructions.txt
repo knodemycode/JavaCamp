@@ -1,0 +1,23 @@
+How to Install Minecraft Forge
+Download the latest src edition of Minecraft Forge from: http://files.minecraftforge.net/
+Extract the contents to a new folder.
+
+Windows
+On Windows, shift+Right Click in the folder and “open command window here”
+gradlew setupDecompWorkspace --refresh-dependencies
+gradlew eclipse
+
+Linux/Mac
+On Linux/Mac start the terminal and use the “cd” command to navigate to the folder with the forge contents.
+./gradlew setupDecompWorkspace --refresh-dependencies
+if that doesn’t work try chmod +x gradlew and then the above line again
+./gradlew eclipse
+
+
+Add a new workspace by pointing eclipse to the eclipse folder inside the forge folder.
+
+
+How to Use Minecraft Forge
+If you go to the Referenced Libraries Folder, and click on forgeSrc you can see brown packages with all the class files for Minecraft.
+In the src/main/java folder, make a new package with the name of your mod.
+Add the java files from Github to the package through your file explorer.
