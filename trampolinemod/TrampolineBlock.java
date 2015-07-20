@@ -26,7 +26,7 @@ public class TrampolineBlock extends Block {
 	
 	
 	public void onFallenUpon(World world, BlockPos bp,  Entity entity, float f){
-		entity.moveEntity(entity.serverPosX, entity.serverPosY +3, entity.serverPosZ);
+		entity.moveEntity(entity.serverPosX, entity.serverPosY, entity.serverPosZ);
 		//to make him bounce, add a number to entity.serverPosY
 	}
 }
