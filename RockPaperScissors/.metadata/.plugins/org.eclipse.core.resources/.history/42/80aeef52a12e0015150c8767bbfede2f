@@ -1,0 +1,14 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class RPS {
+	
+	public static void main(String args[]){
+		JFrame Window = new JFrame();
+		Window.setTitle("Rock, Paper, Scissors!");
+		Window.setVisible(true);
+		JFrame Frame = new JFrame();
+		Frame.setVisible(true);
+	}
+
+}

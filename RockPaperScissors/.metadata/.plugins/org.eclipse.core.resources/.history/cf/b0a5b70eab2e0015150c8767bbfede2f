@@ -1,0 +1,87 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class RPS {
+	
+	public static void main(String args[]){
+		
+		Font ButtonFont = new Font("Comic Sans Ms",0,20);
+		Font LabelFont = new Font("Comic Sans Ms",0,50);
+		
+		JFrame Window = new JFrame("Rock, Paper, Scissors!");
+		Window.setVisible(true);
+		Window.setSize(500,500);
+		Window.setLocationRelativeTo(null);
+		Window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		//The main panel
+		final JPanel StartPanel = new JPanel();
+		StartPanel.setLayout(null);
+		StartPanel.setBounds(0,0,500,500);
+		StartPanel.setBackground(Color.black);
+		Window.add(StartPanel);
+		StartPanel.setVisible(true);
+		
+		JButton StartButton = new JButton("Start Game");
+		StartButton.setBounds(150,150,200,100);
+		StartButton.setFont(ButtonFont);
+		StartButton.setBackground(Color.green);
+		StartButton.setForeground(Color.black);
+		StartPanel.add(StartButton);
+	    
+	    
+	    //The game window
+	    final JPanel GamePanel = new JPanel();
+	    GamePanel.setLayout(null);
+	    GamePanel.setBounds(0,0,500,500);
+	    GamePanel.setBackground(Color.black);
+	    Window.add(GamePanel);
+	    GamePanel.setVisible(false);
+		
+		JButton RockButton = new JButton("ROCK");
+		RockButton.setBounds(150,200,200,50);
+		RockButton.setFont(ButtonFont);
+		RockButton.setBackground(Color.green);
+		RockButton.setForeground(Color.black);
+		GamePanel.add(RockButton);
+		
+		JButton PaperButton = new JButton("PAPER");
+		PaperButton.setBounds(150,275,200,50);
+		PaperButton.setFont(ButtonFont);
+		PaperButton.setBackground(Color.green);
+		PaperButton.setForeground(Color.black);
+		GamePanel.add(PaperButton);
+		
+		JButton ScissorButton = new JButton("SCISSOR");
+		ScissorButton.setBounds(150,350,200,50);
+		ScissorButton.setFont(ButtonFont);
+		ScissorButton.setBackground(Color.green);
+		ScissorButton.setForeground(Color.black);
+		GamePanel.add(ScissorButton);
+
+		JLabel Result = new JLabel("Make a move!");
+		Result.setBounds(80,100,340,40);
+		Result.setFont(LabelFont);
+		Result.setForeground(Color.green);
+		GamePanel.add(Result);
+		
+		
+		
+	    StartButton.addActionListener(new ActionListener(){
+	        public void actionPerformed(ActionEvent event){
+	            StartPanel.setVisible(false);
+	            GamePanel.setVisible(true);
+	       }
+	    });
+	    
+	    RockButton.addActionListener(new ActionListener(){
+	        public void actionPerformed(ActionEvent event){
+	            StartPanel.setVisible(false);
+	            GamePanel.setVisible(false);
+	       }
+	    });
+	}
+
+}

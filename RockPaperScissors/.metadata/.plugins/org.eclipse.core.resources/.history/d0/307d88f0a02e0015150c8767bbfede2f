@@ -1,0 +1,11 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class RPS {
+	
+	public static void main(String args[]){
+		JPanel Window = new JPanel(null);
+		JFrame Frame = new JFrame();
+	}
+
+}

@@ -1,0 +1,17 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class RPS {
+	
+	public static void main(String args[]){
+		JFrame Window = new JFrame("Rock, Paper, Scissors!");
+		Window.setVisible(true);
+		
+		JButton StartGame = new JButton("Start Game");
+	    StartGame.addActionListener(new ActionListener(){
+	        public void actionPerformed(ActionEvent event){
+	       }
+	    });
+	}
+
+}
