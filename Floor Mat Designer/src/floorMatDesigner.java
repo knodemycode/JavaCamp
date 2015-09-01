@@ -10,7 +10,7 @@ public class floorMatDesigner {
 		// TODO Auto-generated method stub
 		basicDesign = randomDesign(5,4);
 		makeDesign(2,3);
-		System.out.print(totalDesign);
+		System.out.print(toString(totalDesign));
 		
 	}
 
@@ -21,7 +21,7 @@ public class floorMatDesigner {
 		String[][] basicPattern = new String[a][b];
 		for(int i=0; i<a; i++){
 			for(int j=0; j<b; j++){
-				int x = (int) Math.random()*4;
+				int x = (int) (Math.random()*4);
 				if(x == 0){
 					basicPattern[i][j] = "X";
 				}
@@ -83,5 +83,18 @@ public class floorMatDesigner {
 			}
 		}
 	}
+	public static String toString(String[][] a){
+		String aString = new String();
+		for (int row = 0; row < a.length; row++) {
+		    if (a[row] != null && a[row].length > 0) {
+		        aString = aString + a[row][0];
 
+		        for (int column = 1; column < a[row].length; column++) {
+		            aString = aString + " " + a[row][column];
+		        }
+		    }
+		    aString = aString + "\n";
+		}
+		return aString;
+	}
 }
