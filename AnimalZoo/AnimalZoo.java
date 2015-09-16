@@ -32,7 +32,13 @@ public class AnimalZoo{
 		aPress = false;
 		bPress = false;
 		
-		makeAnimals();
+		//write your code for an animal here
+
+		ImageIcon cheetahPic = new ImageIcon("cheetah.jpg");
+		JLabel cheetahLabel = new JLabel(cheetahPic);
+		Animal cheetah = new Animal("cheetah", "A spotted animal that is fast" ,cheetahPic);
+
+		//end section for animal code
 
 		JButton aButton = new JButton("Option A");
 		aButton.addActionListener(new ActionListener(){
@@ -45,7 +51,7 @@ public class AnimalZoo{
 		myFrame.setSize(600,  300);
 		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		myFrame.setVisible(true);
-		upPanel.add(hatLabel);
+		upPanel.add(cheetahLabel);
 		centerPanel.add(aButton);
 		downPanel.add(textBox);
 		myFrame.add(centerPanel, BorderLayout.CENTER);
@@ -53,18 +59,16 @@ public class AnimalZoo{
 		myFrame.add(downPanel,  BorderLayout.SOUTH);
 		
 
-		displayAnimal();
+		//displayAnimal();
+
+
 	}
 	
-	public static void makeAnimals(){
-		ImageIcon hat = new ImageIcon("cheetah.jpg");
-		JLabel hatLabel = new JLabel(hat);
-		Animal zebra = new Animal("Zebra", hat);
-
-	}
 
 	public static void displayAnimal(){
-		textBox.setText("Are you brave? (a) Yes  (b) No");
+
+
+		textBox.setText(ani);
 		while(!aPress && !bPress){
 			System.out.println("");
 		}
