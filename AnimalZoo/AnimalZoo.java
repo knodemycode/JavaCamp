@@ -23,6 +23,7 @@ public class AnimalZoo{
 	static boolean aPress;
 	static boolean bPress;
 
+
 	public static void main(String[] args) {
 		myFrame = new JFrame();
 		upPanel = new JPanel();
@@ -31,16 +32,25 @@ public class AnimalZoo{
 		centerPanel = new JPanel();
 		aPress = false;
 		bPress = false;
+
+		int i = 0;
+
+		//this is what our zoo program will loop through
+		Animal[] animalArray = new Animal[2];
 		
 		//write your code for an animal here
 
 		ImageIcon cheetahPic = new ImageIcon("cheetah.jpg");
 		JLabel cheetahLabel = new JLabel(cheetahPic);
 		Animal cheetah = new Animal("cheetah", "A spotted animal that is fast" ,cheetahPic);
+		Animal zebra = new Animal("zebra", "has stripes" ,cheetahPic);
+
+		animalArray[0] = cheetah;
+		animalArray[1] = zebra;
 
 		//end section for animal code
 
-		JButton aButton = new JButton("Option A");
+		JButton aButton = new JButton("Next animal");
 		aButton.addActionListener(new ActionListener(){
 			 public void actionPerformed(ActionEvent e)
 	            {
@@ -60,15 +70,25 @@ public class AnimalZoo{
 		
 
 		//displayAnimal();
+		//code to display the animals
 
+		textBox.setText(animalArray[i].getName() + " : " + animalArray[i].getDescription());
+		while(!aPress){
+			System.out.println("");
+		}
+		if(aPress){
+			i++;
+			textBox.setText(animalArray[i].getName() + " : " + animalArray[i].getDescription());
+			aPress = false;
+		}
 
 	}
 	
-
+	//this method is deprecated and NEEDS to be removed
 	public static void displayAnimal(){
 
 
-		textBox.setText(ani);
+		//textBox.setText(ani);
 		while(!aPress && !bPress){
 			System.out.println("");
 		}
