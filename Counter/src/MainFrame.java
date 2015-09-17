@@ -289,5 +289,6 @@ public class MainFrame {
 		}
 		frame.setVisible(true);
 		frame.repaint();
+		updateLabels();
 	}
 }
