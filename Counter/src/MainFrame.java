@@ -13,14 +13,14 @@ public class MainFrame {
 	ArrayList<JButton> add;
 	ArrayList<JButton> minus;
 	ArrayList<JButton> delete;
-	private static final int bigX = 75;
-	private static final int bigY = 40;
-	private static final int smallX = 50;
-	private static final int smallY = 40;
-	private static final int deleteX = 15;
-	private static final int deleteY = 15;
+	private final int bigX = 75;
+	private final int bigY = 40;
+	private final int smallX = 50;
+	private final int smallY = 40;
+	private final int deleteX = 15;
+	private final int deleteY = 15;
 	
-	/* Creates the class and sets all variables and the addCoutner button */
+	/* Creates the class and sets all variables and the addCounter button */
 	public MainFrame() {
 		counterList = new ArrayList<Counter>(4);
 		frame = new JFrame("Counter");
